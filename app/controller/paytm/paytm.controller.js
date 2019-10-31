@@ -14,8 +14,8 @@ module.exports = {
             }else{
                 paramarray[name] = paramlist[name];
             }
-        }
-         paramarray["CALLBACK_URL"]="http://localhost:3000/api/paytm/response";
+        }//http://34.65.110.237/api
+         paramarray["CALLBACK_URL"]="http://34.65.110.237/api/paytm/response";
          checksum.genchecksum(paramarray,PAYTM_MERCHANT_KEY,(err,result)=>{
             if(err) throw err;
             res.render("paytm/request",{result});
